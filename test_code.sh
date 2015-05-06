@@ -1,6 +1,8 @@
 #!/bin/bash
 # Proper header for a Bash script.
 
+bundle install
+
 echo '************'
 echo 'brakeman -Aq'
 brakeman -Aq
