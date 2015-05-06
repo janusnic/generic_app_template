@@ -1,0 +1,7 @@
+AllCops:
+  Include:
+    - Rakefile
+  Exclude:
+    - bin/spring
+    - test/test_helper.rb
+    - db/schema.rb

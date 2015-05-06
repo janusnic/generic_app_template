@@ -1,0 +1,5 @@
+TESTING
+
+test/test_helper.rb
+
+test/integration
