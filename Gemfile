@@ -50,3 +50,6 @@ group :development do
   gem 'guard-bundler-audit'
   gem 'metric_fu'
 end
+
+# ADDITIONS: user/authentication
+gem 'devise'
