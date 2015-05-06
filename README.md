@@ -13,7 +13,7 @@ The Bash scripts in the root directory that allow you to perform routine
 tasks in only one step.  To execute the Bash (*.sh) scripts, enter the 
 command "sh (name of script)". The Bash scripts provided are:
 
-1.  test.sh: This command sets up and tests this Rails app.  When you first
+1.  test_app.sh: This command sets up and tests this Rails app.  When you first
 clone this repository to a machine with a fresh Ruby on Rails installation, 
 all tests should proceed as expected.  If all goes well, your app will 
 pass all tests.  Please note that this script does NOT run code checking 
