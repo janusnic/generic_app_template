@@ -5,3 +5,13 @@ AllCops:
     - bin/spring
     - test/test_helper.rb
     - db/schema.rb
+    - config/initializers/devise.rb
+    - db/migrate/20150508050801_devise_create_users.rb
+
+Style/AlignHash:
+  Exclude:
+    - config/routes.rb
+    
+ClassAndModuleChildren:
+  Exclude:
+    - app/controllers/users/*
