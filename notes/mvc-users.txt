@@ -3,6 +3,8 @@ USERS
 app/models/user.rb
 
 test/models/user_test.rb
+  def setup
+  test 'should be valid' do
 
 app/controllers/users
   confirmations_controller.rb
