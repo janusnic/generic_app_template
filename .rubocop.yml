@@ -11,6 +11,7 @@ AllCops:
 Style/AlignHash:
   Exclude:
     - config/routes.rb
+    - test/models/user_test.rb
     
 ClassAndModuleChildren:
   Exclude:

@@ -21,6 +21,7 @@ rails_best_practices -e 'app/helpers/static_pages_helper.rb' .
 
 echo '************'
 echo 'bundle-audit'
+bundle-audit
 
 echo '*******************************'
 echo 'metric_fu --no-open > /dev/null'
