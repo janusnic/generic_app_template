@@ -1,0 +1,42 @@
+USERS
+
+app/models/user.rb
+
+test/models/user_test.rb
+
+app/controllers/users
+  confirmations_controller.rb
+  omniauth_callbacks_controller.rb
+  passwords_controller.rb
+  registrations_controller.rb
+  sessions_controller.rb
+  unlocks_controller.rb
+
+app/views/users/confirmations/new.html.erb
+
+app/views/users/mailer
+  confirmation_instructions.html.erb
+  reset_password_instructions.html.erb
+  unlock_instructions.html.erb
+
+app/views/users/passwords
+  edit.html.erb
+  new.html.erb
+
+app/views/users/registrations
+  edit.html.erb
+  new.html.erb
+
+app/views/users/sessions
+  new.html.erb
+
+app/views/users/shared
+  _links.html.erb
+
+app/views/users/unlocks/new.html.erb
+
+test/fixtures/users.yml
+
+config/routes.rb
+  devise_for :users, controllers: { sessions: 'users/sessions',
+    passwords: 'users/passwords', registrations: 'users/registrations' }
