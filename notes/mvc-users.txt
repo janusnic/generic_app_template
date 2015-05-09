@@ -5,6 +5,11 @@ app/models/user.rb
 test/models/user_test.rb
   def setup
   test 'should be valid' do
+  test 'email should be present' do
+  test 'email should not be too long' do
+  test 'email validation should accept valid addresses' do
+  test 'email validation should reject invalid addresses' do
+  test 'email address should be unique' do
 
 app/controllers/users
   confirmations_controller.rb

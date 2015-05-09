@@ -16,3 +16,7 @@ Style/AlignHash:
 ClassAndModuleChildren:
   Exclude:
     - app/controllers/users/*
+
+PercentLiteralDelimiters:
+  Exclude:
+    - test/models/user_test.rb
