@@ -4,6 +4,7 @@ app/controllers:
 application_controller.rb
 static_pages_controller.rb
 users
+users_controller.rb
 
 app/controllers/users:
 confirmations_controller.rb
@@ -45,6 +46,7 @@ passwords
 registrations
 sessions
 shared
+show.html.erb
 unlocks
 
 app/views/users/confirmations:
@@ -81,6 +83,7 @@ test.sqlite3
 
 db/migrate:
 20150508050801_devise_create_users.rb
+20150508224907_add_name_to_users.rb
 
 
 
@@ -113,6 +116,9 @@ user_test.rb
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions',
     passwords: 'users/passwords', registrations: 'users/registrations' }
+
+  resources :users
+
   root 'static_pages#home'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
