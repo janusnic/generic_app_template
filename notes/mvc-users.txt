@@ -10,6 +10,11 @@ test/models/user_test.rb
   test 'email validation should accept valid addresses' do
   test 'email validation should reject invalid addresses' do
   test 'email address should be unique' do
+  test 'first name should be present' do
+  test 'last name should be present' do
+  test 'first name should not be too long' do
+  test 'last name should not be too long' do
+  test "password should have a minimum length" do
 
 app/controllers/users
   confirmations_controller.rb
