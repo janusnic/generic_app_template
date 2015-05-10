@@ -3,14 +3,16 @@ AllCops:
     - Rakefile
   Exclude:
     - bin/spring
-    - test/test_helper.rb
-    - db/schema.rb
     - config/initializers/devise.rb
     - db/migrate/20150508050801_devise_create_users.rb
+    - db/schema.rb
+    - test/test_helper.rb
 
 Style/AlignHash:
   Exclude:
+    - app/controllers/application_controller.rb
     - config/routes.rb
+    - db/seeds.rb
     - test/models/user_test.rb
     
 ClassAndModuleChildren:
@@ -20,3 +22,23 @@ ClassAndModuleChildren:
 PercentLiteralDelimiters:
   Exclude:
     - test/models/user_test.rb
+    
+BlockEndNewline:
+  Exclude:
+    - app/controllers/application_controller.rb
+
+AlignParameters:
+  Exclude:
+    - app/controllers/application_controller.rb
+    
+MultilineBlockLayout:
+  Exclude:
+    - app/controllers/application_controller.rb
+    
+BlockDelimiters:
+  Exclude:
+    - app/controllers/application_controller.rb
+
+IndentationConsistency:
+  Exclude:
+    - app/controllers/application_controller.rb
