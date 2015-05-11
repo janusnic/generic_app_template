@@ -1,0 +1,7 @@
+SIGN-UP
+------------------------------------------
+app/views/users/registrations/new.html.erb
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+Parameters: last_name, first_name, email, password, password_confirmation
+--------------------------------------------
+app/controllers/users/sessions_controller.rb

@@ -55,10 +55,6 @@ app/views/users/unlocks/new.html.erb
 
 test/fixtures/users.yml
 
-
-	app/views/users/show.html.erb
-
-
 config/routes.rb
   devise_for :users, controllers: { sessions: 'users/sessions',
     passwords: 'users/passwords', registrations: 'users/registrations' }
