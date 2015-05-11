@@ -26,7 +26,6 @@ app/controllers/users
   confirmations_controller.rb
   omniauth_callbacks_controller.rb
   passwords_controller.rb
-  registrations_controller.rb
   sessions_controller.rb
   unlocks_controller.rb
 
@@ -38,10 +37,6 @@ app/views/users/mailer
   unlock_instructions.html.erb
 
 app/views/users/passwords
-  edit.html.erb
-  new.html.erb
-
-app/views/users/registrations
   edit.html.erb
   new.html.erb
 

@@ -1,0 +1,11 @@
+USERS - REGISTRATION
+
+app/views/users/registrations
+  new.html.erb (http://localhost:3000/users/sign_up)
+    Parameters: last_name, first_name, email, password, password_confirmation
+  edit.html.erb
+  
+app/controllers/users/registrations_controller.rb
+
+config/routes.rb
+  devise_for :users, controllers: { registrations: 'users/registrations' }
