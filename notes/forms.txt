@@ -1,3 +1,4 @@
+=======
 SIGN-UP
 ------------------------------------------
 app/views/users/registrations/new.html.erb
@@ -5,3 +6,8 @@ app/views/users/registrations/new.html.erb
 Parameters: last_name, first_name, email, password, password_confirmation
 --------------------------------------------
 app/controllers/users/sessions_controller.rb
+----------------
+config/routes.rb
+  devise_for :users, controllers: { sessions: 'users/sessions',
+    passwords: 'users/passwords', registrations: 'users/registrations' }
+  resources :users
