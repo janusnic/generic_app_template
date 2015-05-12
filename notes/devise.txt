@@ -3,3 +3,6 @@ http://www.gotealeaf.com/blog/how-to-use-devise-in-rails-for-authentication
 
 Adding custom fields to devise:
 http://www.peoplecancode.com/tutorials/adding-custom-fields-to-devise
+
+Example app:
+https://github.com/RailsApps/rails-devise
