@@ -38,5 +38,8 @@ ls -R1 -I concerns test >> notes/1-file_list.txt
 echo "" >> notes/1-file_list.txt
 cat config/routes.rb >> notes/1-file_list.txt
 
+echo "" >> notes/1-file_list.txt
+rake routes >> notes/1-file_list.txt
+
 echo "FINISHED compiling the list of files that make up the MVC structure"
 echo "*******************************************************************"
