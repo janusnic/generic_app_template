@@ -1,17 +1,27 @@
 USERS - SESSIONS
 
-http://localhost:3000/users/sign_in
-http://localhost:3000/users/sign_out
-=====================================
-app/views/users/sessions/new.html.erb
-Parameters: email, password, remember_me
-============================================
 app/controllers/users/sessions_controller.rb
-================
+  default devise responses in use
 config/routes.rb
   devise_for :users, controllers: { sessions: 'users/sessions' }
-===========
+
+=======
+SIGN IN
 rake routes
-        new_user_session GET    /users/sign_in(.:format)       users/sessions#new
-            user_session POST   /users/sign_in(.:format)       users/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)      users/sessions#destroy
+  new_user_session GET    /users/sign_in(.:format)       users/sessions#new
+  user_session POST   /users/sign_in(.:format)       users/sessions#create
+app/views/layouts/_header.html.erb
+  <li><%= link_to 'Login', new_user_session_path %></li>
+http://localhost:3000/users/sign_in
+app/views/users/sessions/new.html.erb
+  Parameters: email, password, remember_me
+
+========
+SIGN OUT
+http://localhost:3000/users/sign_out
+app/views/layouts/_header.html.erb
+  <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+config/initializers/devise.rb
+  config.sign_out_via = :delete
+rake routes
+  destroy_user_session DELETE /users/sign_out(.:format)      users/sessions#destroy
