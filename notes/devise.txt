@@ -6,3 +6,6 @@ http://www.peoplecancode.com/tutorials/adding-custom-fields-to-devise
 
 Example app:
 https://github.com/RailsApps/rails-devise
+
+Devise cheat sheet:
+http://ricostacruz.com/cheatsheets/devise.html
