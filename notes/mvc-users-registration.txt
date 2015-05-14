@@ -7,5 +7,10 @@ app/views/users/registrations
   
 app/controllers/users/registrations_controller.rb
 
+test/integration/users_signup_test.rb
+  test 'invalid signup information' do
+  test 'valid signup information' do
+
 config/routes.rb
   devise_for :users, controllers: { registrations: 'users/registrations' }
+
