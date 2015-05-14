@@ -14,6 +14,7 @@ Style/AlignHash:
     - config/routes.rb
     - db/seeds.rb
     - test/models/user_test.rb
+    - test/integration/users_signup_test.rb
     
 ClassAndModuleChildren:
   Exclude:
