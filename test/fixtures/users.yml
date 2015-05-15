@@ -11,16 +11,31 @@ connery:
   encrypted_password: <%= User.new.send(:password_digest, 'goldfinger') %>
 
 lazenby:
+  last_name: 'Lazenby'
+  first_name: 'George'
   email: 'george_lazenby@example.com'
+  encrypted_password: <%= User.new.send(:password_digest, 'ohmss1969') %>
 
 moore:
+  last_name: 'Moore'
+  first_name: 'Roger'
   email: 'roger_moore@example.com'
+  encrypted_password: <%= User.new.send(:password_digest, 'moonraker') %>
 
 dalton:
+  last_name: 'Dalton'
+  first_name: 'Timothy'
   email: 'timothy_dalton@example.com'
+  encrypted_password: <%= User.new.send(:password_digest, 'daylights') %>
 
 brosnan:
+  last_name: 'Brosnan'
+  first_name: 'Pierce'
   email: 'pierce_brosnan@example.com'
+  encrypted_password: <%= User.new.send(:password_digest, 'goldeneye') %>
 
 craig:
+  last_name: 'Craig'
+  first_name: 'Daniel'
   email: 'daniel_craig@example.com'
+  encrypted_password: <%= User.new.send(:password_digest, 'reboot007') %>

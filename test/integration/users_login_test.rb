@@ -8,24 +8,26 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test 'login with invalid information' do
     get new_user_session_path
-    assert_template 'sessions/new'
-    post user_session_path, session: { email: '', password: '' }
+    post_via_redirect user_session_path, user: { email: @user.email,
+      password: 'Austin Powers' }
     assert_template 'sessions/new'
     assert_not flash.empty?
+    assert_select 'a[href=?]', new_user_session_path, count: 1
+    assert_select 'a[href=?]', destroy_user_session_path, count: 0
+    assert_select 'a[href=?]', user_path(@user), count: 0
     get root_path
     assert flash.empty?
   end
 
   test 'login with valid information' do
     get new_user_session_path
-    post user_session_path, session: { email: @user.email, password: 'goldfinger' }
-    assert_template '/'
-    puts @user.id
-    puts new_user_session_path
-    puts destroy_user_session_path
-    puts user_path(@user)
+    post_via_redirect user_session_path, user: { email: @user.email,
+      password: 'goldfinger' }
     assert_select 'a[href=?]', new_user_session_path, count: 0
-    assert_select 'a[href=?]', destroy_user_session_path
-    assert_select 'a[href=?]', user_path(@user)
+    assert_select 'a[href=?]', destroy_user_session_path, count: 1
+    assert_select 'a[href=?]', user_path(@user), count: 1
+    assert_not flash.empty?
+    get root_path
+    assert flash.empty?
   end
 end

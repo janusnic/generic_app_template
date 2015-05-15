@@ -15,6 +15,7 @@ Style/AlignHash:
     - db/seeds.rb
     - test/models/user_test.rb
     - test/integration/users_signup_test.rb
+    - test/integration/users_login_test.rb
     
 ClassAndModuleChildren:
   Exclude:

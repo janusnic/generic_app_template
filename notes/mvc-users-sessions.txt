@@ -25,3 +25,10 @@ config/initializers/devise.rb
   config.sign_out_via = :delete
 rake routes
   destroy_user_session DELETE /users/sign_out(.:format)      users/sessions#destroy
+
+=======
+TESTING
+tests/integration/user_login_test.rb
+  def setup
+  test "login with invalid information" do
+  test "login with valid information followed by logout" do
