@@ -30,4 +30,20 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     get root_path
     assert flash.empty?
   end
+
+  test 'logging out' do
+    # Logging in
+    get new_user_session_path
+    post_via_redirect user_session_path, user: { email: @user.email,
+      password: 'goldfinger' }
+    # Logging out
+    delete destroy_user_session_path
+    follow_redirect!
+    assert_not flash.empty?
+    assert_select 'a[href=?]', new_user_session_path, count: 1
+    assert_select 'a[href=?]', destroy_user_session_path, count: 0
+    assert_select 'a[href=?]', user_path(@user), count: 0
+    get root_path
+    assert flash.empty?
+  end
 end

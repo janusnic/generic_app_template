@@ -32,3 +32,4 @@ tests/integration/user_login_test.rb
   def setup
   test "login with invalid information" do
   test "login with valid information followed by logout" do
+  test 'logging out' do
