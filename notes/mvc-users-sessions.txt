@@ -30,6 +30,7 @@ rake routes
 TESTING
 tests/integration/user_login_test.rb
   def setup
-  test "login with invalid information" do
-  test "login with valid information followed by logout" do
+  test 'login with invalid information' do
+  test 'login with valid information, no remembering' do
   test 'logging out' do
+  test 'login with remembering' do
