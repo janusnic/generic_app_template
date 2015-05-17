@@ -13,4 +13,25 @@ test/integration/users_signup_test.rb
 
 config/routes.rb
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  
+=====================
+NEW USER REGISTRATION
+http://localhost:3000/users/sign_up
+rake routes
+  new_user_registration GET    /users/sign_up(.:format)       users/registrations#new
+app/views/users/registrations/new.html.erb
+  Parameters: last_name, first_name, email, password, password_confirmation
+app/controllers/users/registrations_controller.rb
+
+======================
+EDIT USER REGISTRATION
+http://localhost:3000/users/edit
+rake routes
+  edit_user_registration GET    /users/edit(.:format)          users/registrations#edit
+app/views/users/registrations/edit.html.erb
+  Parameters: last_name, first_name, email, password, password_confirmation
+app/controllers/users/registrations_controller.rb
+
+========================
+DELETE USER REGISTRATION
 
