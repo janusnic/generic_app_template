@@ -7,10 +7,6 @@ app/views/users/registrations
   
 app/controllers/users/registrations_controller.rb
 
-test/integration/users_signup_test.rb
-  test 'invalid signup information' do
-  test 'valid signup information' do
-
 config/routes.rb
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
@@ -22,6 +18,9 @@ rake routes
 app/views/users/registrations/new.html.erb
   Parameters: last_name, first_name, email, password, password_confirmation
 app/controllers/users/registrations_controller.rb
+test/integration/users_signup_test.rb
+  test 'invalid signup information' do
+  test 'valid signup information' do
 
 ======================
 EDIT USER REGISTRATION
@@ -31,6 +30,10 @@ rake routes
 app/views/users/registrations/edit.html.erb
   Parameters: last_name, first_name, email, password, password_confirmation
 app/controllers/users/registrations_controller.rb
+test/integration/users_edit_test.rb
+  def setup
+  test "unsuccessful edit" do
+  test "successful edit with friendly forwarding" do
 
 ========================
 DELETE USER REGISTRATION

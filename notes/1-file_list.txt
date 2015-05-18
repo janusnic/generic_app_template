@@ -107,6 +107,7 @@ application_helper.rb
 
 test/integration:
 site_layout_test.rb
+users_edit_test.rb
 users_login_test.rb
 users_signup_test.rb
 
