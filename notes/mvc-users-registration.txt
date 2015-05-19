@@ -4,9 +4,7 @@ app/views/users/registrations
   new.html.erb (http://localhost:3000/users/sign_up)
     Parameters: last_name, first_name, email, password, password_confirmation
   edit.html.erb
-  
 app/controllers/users/registrations_controller.rb
-
 config/routes.rb
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
@@ -40,5 +38,6 @@ DELETE USER REGISTRATION
 http://localhost:3000/users/cancel
 rake routes
   cancel_user_registration GET    /users/cancel(.:format)        users/registrations#cancel
+app/controllers/users/registrations_controller.rb
 app/views/users/registrations/edit.html.erb
   <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>

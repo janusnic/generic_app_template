@@ -25,6 +25,7 @@ user.rb
 
 app/views:
 layouts
+shared
 static_pages
 users
 
@@ -33,6 +34,9 @@ application.html.erb
 _footer.html.erb
 _header.html.erb
 _shim.html.erb
+
+app/views/shared:
+_error_messages.html.erb
 
 app/views/static_pages:
 about.html.erb
