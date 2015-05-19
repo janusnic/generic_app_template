@@ -20,6 +20,9 @@ app/controllers/users_controller.rb
   def show
   def new
 
+app/helpers/users_helper.rb
+  def gravatar_for(user)
+
 app/views/users/show.html.erb
 
 app/controllers/users

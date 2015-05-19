@@ -17,6 +17,7 @@ unlocks_controller.rb
 app/helpers:
 application_helper.rb
 static_pages_helper.rb
+users_helper.rb
 
 app/mailers:
 
