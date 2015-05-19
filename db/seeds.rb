@@ -12,10 +12,19 @@ User.create!(last_name: 'Arroway', first_name: 'Ellie',
   email: 'ellie_arroway@railstutorial.org', password: '3.1415926',
   password_confirmation: '3.1415926')
 
-99.times do |n|
+49.times do |n|
   name_l = Faker::Name.last_name
   name_f = Faker::Name.first_name
   email_address = "example-#{n + 1}@railstutorial.org"
+
+  User.create!(last_name: name_l, first_name: name_f, email: email_address,
+    password: 'password1', password_confirmation: 'password1')
+end
+
+50.times do |n|
+  name_l = Faker::Name.last_name
+  name_f = Faker::Name.first_name
+  email_address = Faker::Internet.email(name_f)
 
   User.create!(last_name: name_l, first_name: name_f, email: email_address,
     password: 'password1', password_confirmation: 'password1')
