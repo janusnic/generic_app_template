@@ -21,7 +21,7 @@ User.create!(last_name: 'Arroway', first_name: 'Ellie',
     password: 'password1', password_confirmation: 'password1')
 end
 
-50.times do |n|
+50.times do
   name_l = Faker::Name.last_name
   name_f = Faker::Name.first_name
   email_address = Faker::Internet.email(name_f)
