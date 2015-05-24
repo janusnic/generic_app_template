@@ -26,10 +26,17 @@ db/schema.rb
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "last_name"
+    t.string   "first_name"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 ================================================
@@ -77,7 +84,7 @@ db/migrate/20150508050801_devise_create_users.rb
 db/seeds.rb
 User.create!(last_name: 'Arroway', first_name: 'Ellie',
   email: 'ellie_arroway@railstutorial.org', password: '3.1415926',
-  password_confirmation: '3.1415926')
+  password_confirmation: '3.1415926', confirmed_at: Time.now)
 
 49.times do |n|
   name_l = Faker::Name.last_name
@@ -85,14 +92,16 @@ User.create!(last_name: 'Arroway', first_name: 'Ellie',
   email_address = "example-#{n + 1}@railstutorial.org"
 
   User.create!(last_name: name_l, first_name: name_f, email: email_address,
-    password: 'password1', password_confirmation: 'password1')
+    password: 'password1', password_confirmation: 'password1', 
+    confirmed_at: Time.now)
 end
 
-50.times do |n|
+50.times do
   name_l = Faker::Name.last_name
   name_f = Faker::Name.first_name
   email_address = Faker::Internet.email(name_f)
 
   User.create!(last_name: name_l, first_name: name_f, email: email_address,
-    password: 'password1', password_confirmation: 'password1')
+    password: 'password1', password_confirmation: 'password1', 
+    confirmed_at: Time.now)
 end
