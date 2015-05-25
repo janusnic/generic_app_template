@@ -1,0 +1,21 @@
+USER CONFIRMATIONS
+
+=================================================
+app/controllers/users/confirmations_controller.rb
+
+==========================================
+app/views/users/confirmations/new.html.erb
+
+=========================================================
+app/views/users/mailer/confirmation_instructions.html.erb
+
+================
+config/routes.rb
+  devise_for :users, controllers: { confirmations: 'users/confirmations' }
+  
+===========
+rake routes
+                  Prefix Verb   URI Pattern                       Controller#Action
+       user_confirmation POST   /users/confirmation(.:format)     devise/confirmations#create
+   new_user_confirmation GET    /users/confirmation/new(.:format) devise/confirmations#new
+                         GET    /users/confirmation(.:format)     devise/confirmations#show
