@@ -18,7 +18,7 @@ User.create!(last_name: 'Arroway', first_name: 'Ellie',
   email_address = "example-#{n + 1}@railstutorial.org"
 
   User.create!(last_name: name_l, first_name: name_f, email: email_address,
-    password: 'password1', password_confirmation: 'password1', 
+    password: 'password1', password_confirmation: 'password1',
     confirmed_at: Time.now)
 end
 
@@ -28,6 +28,6 @@ end
   email_address = Faker::Internet.email(name_f)
 
   User.create!(last_name: name_l, first_name: name_f, email: email_address,
-    password: 'password1', password_confirmation: 'password1', 
+    password: 'password1', password_confirmation: 'password1',
     confirmed_at: Time.now)
 end
