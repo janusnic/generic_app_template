@@ -54,3 +54,8 @@ end
 
 # ADDITIONS: user/authentication
 gem 'devise'
+
+# ADDITIONS: Capybara
+group :test do
+  gem 'capybara'
+end

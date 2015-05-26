@@ -1,0 +1,2 @@
+Cheat sheet:
+http://ricostacruz.com/cheatsheets/capybara.html

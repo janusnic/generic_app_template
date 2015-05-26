@@ -9,6 +9,7 @@ connery:
   first_name: 'Sean'
   email: 'sean_connery@example.com'
   encrypted_password: <%= User.new.send(:password_digest, 'goldfinger') %>
+  confirmed_at: <%= Time.zone.now %>
 
 lazenby:
   last_name: 'Lazenby'
