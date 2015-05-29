@@ -15,14 +15,11 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_equal u1.first_name.to_s, 'Jonathan'
     assert_nil u1.confirmed_at
     assert_text 'confirmation link has been sent to your email address'
-    puts u1.confirmation_token
-    # assert_difference 'User.count', 1 do
-      # post user_registration_path, user: { last_name: 'Higgins',
-                               # first_name: 'Jonathan',
-                               # email: 'jhiggins@example.com',
-                               # password: 'Higgy Baby',
-                               # password_confirmation: 'Higgy Baby' }
-    # end
+    # url_conf = "http://localhost:3000/users/confirmation?confirmation_token=#{u1.confirmation_token}"
+    # puts url_conf
+    # visit url_conf
+    # assert_text 'Your email address has been successfully confirmed.'
+    
     # assert_equal 1, ActionMailer::Base.deliveries.size
     # u1 = assigns(:user)
     # assert_not u1.activated?
