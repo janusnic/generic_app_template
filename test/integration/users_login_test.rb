@@ -90,7 +90,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     page.has_no_link? new_user_session_path
     page.has_link? destroy_user_session_path
     page.has_link? user_path(@u3)
-    assert_nil @u3.remember_created_at
 
     # Logout
     click_on('Logout')
@@ -129,7 +128,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     page.has_no_link? new_user_session_path
     page.has_link? destroy_user_session_path
     page.has_link? user_path(@u4)
-    assert_nil @u4.remember_created_at
 
     # Logout
     click_on('Logout')
