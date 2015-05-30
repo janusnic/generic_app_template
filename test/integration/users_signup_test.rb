@@ -28,5 +28,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_equal u1.last_name.to_s, 'Higgins'
     assert_equal u1.first_name.to_s, 'Jonathan'
     assert_nil u1.confirmed_at
+    assert_not_nil u1.confirmation_token
+    assert_not_nil u1.confirmation_sent_at
   end
 end
