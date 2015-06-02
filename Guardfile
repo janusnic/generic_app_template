@@ -5,6 +5,7 @@
 # If minitest shows errors, correcting these errors is a higher priority
 # than complying with the code checkers.
 
+"""
 guard 'brakeman', :run_on_start => true, :quiet => true do
   puts 'brakeman'
   watch(%r{^app/.+\.(erb|haml|rhtml|rb)$})
@@ -25,6 +26,7 @@ end
 guard 'bundler_audit', run_on_start: true do
   watch('Gemfile.lock')
 end
+"""
 
 # Defines the matching rules for Guard.
 guard :minitest, spring: true, all_on_start: true do
