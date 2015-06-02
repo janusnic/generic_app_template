@@ -16,3 +16,5 @@ http://stackoverflow.com/questions/20285694/failed-to-confirm-email-via-integrat
 http://stackoverflow.com/questions/8886748/testing-account-confirmation-with-rails-rspec-capybara-devise
 http://stackoverflow.com/questions/29426649/how-to-test-logged-logged-out-responses-of-devise-confirmable
 http://eureka.ykyuen.info/2011/03/07/rails-devise-user-sign-in-for-rspec/
+http://blog.pixarea.com/2013/01/making-rspec-feature-specs-easy-with-devise/
+http://www.vanderpol.net/rspec-integration-tests-devise-user-registration/
